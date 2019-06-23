@@ -1,0 +1,27 @@
+.music-chart {
+background:#383838;
+font-size: 14px;
+height: 730px;
+overflow: auto;
+color: white;
+}
+
+input{
+  margin-left: 15px;
+}
+
+.search{
+  height: 5%;
+  width:95%;
+  font-size: 30px;
+}
+
+h1{
+  font-size: 40px;
+  margin-left: 22px;
+  margin-top: 50px;
+}
+
+table {
+  width: 100%;
+}

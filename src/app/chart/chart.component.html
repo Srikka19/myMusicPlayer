@@ -1,0 +1,47 @@
+<div class="music-chart">
+  <!--Playlist title-->
+  <h1>SUMMER 2K19</h1>
+  <!-- Search box -->
+<input class="search form-control" type="text" placeholder="Search my playlist" aria-label="Search" autofocus>
+
+  <mat-table #table [dataSource]="dataSource">
+    <!-- Title Column -->
+    <ng-container matColumnDef="Title">
+      <mat-header-cell *matHeaderCellDef> TITLE </mat-header-cell>
+      <mat-cell *matCellDef="let song"> {{song.Title}} </mat-cell>
+    </ng-container>
+
+    <!-- Artist Column -->
+    <ng-container matColumnDef="Artist">
+      <mat-header-cell *matHeaderCellDef> ARTIST </mat-header-cell>
+      <mat-cell *matCellDef="let song"> {{song.Artist}} </mat-cell>
+    </ng-container>
+
+    <!-- Album Column -->
+    <ng-container matColumnDef="Album">
+      <mat-header-cell *matHeaderCellDef> ALBUM </mat-header-cell>
+      <mat-cell *matCellDef="let song"> {{song.Album}} </mat-cell>
+    </ng-container>
+
+    <!-- Duration Column -->
+    <ng-container matColumnDef="Duration">
+      <mat-header-cell *matHeaderCellDef> DURATION </mat-header-cell>
+      <mat-cell *matCellDef="let song"> {{song.Duration}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" 
+             (dblclick)="onDblClick(row)"
+             (click)="onClick(row)"
+             (mouseover)="onHover(row)"
+             [style.background]="highlightedRow.indexOf(row) != -1 ? '#3d415a' : '' ||
+             selectedRow.indexOf(row) != -1 ? '#777fae' : '' "
+             [style.font-weight]= "selectedRow.indexOf(row) != -1 ? 'bold' : ''">
+    </mat-row>
+  </mat-table>
+</div>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
