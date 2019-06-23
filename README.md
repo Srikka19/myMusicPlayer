@@ -1,5 +1,8 @@
 # MyMusicPlayer
 
+![Screenshot 2019-06-23 at 13 10 12](https://user-images.githubusercontent.com/46629896/59976145-52f7bf80-95b8-11e9-8ca0-b97fd8b05738.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
 ## Development server
